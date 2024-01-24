@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
-import Model from './Model';
 import { FaSearch } from "react-icons/fa";
-
-
-
 
 
 function Navbar({updateSearchResults}) {
     const [navbarVisible, setNavbarVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-      const [isModelVisible, setIsModelVisible] = useState(false); // Step 1
+     
     
     const navigate = useNavigate();
     const API_KEY = "13ed1ecfaf93ecd77dad082740d033a2"
@@ -27,7 +23,7 @@ function Navbar({updateSearchResults}) {
 
             updateSearchResults(results);
 
-            // Redirect to the search page with the search results
+        
             navigate(`/search/${searchQuery}`);
         } catch (error) {
             console.error(error);
@@ -61,10 +57,6 @@ function Navbar({updateSearchResults}) {
         };
     }, []);
 
-     const handleSignInSignUpClick = () => {
-    setIsModelVisible(!isModelVisible); // Step 2
-  };
-
     return (
         <div className={`nav ${navbarVisible ? 'show' : 'hide'}`}>
             <div className="nav-content px-2 righteous">
@@ -97,11 +89,11 @@ function Navbar({updateSearchResults}) {
                         <a href="/Contact">Contact</a>
                     </div>
                     <div className="">
-                        <button onClick={handleSignInSignUpClick} className='text-white bg-blue-500 rounded py-1 px-2'>Login</button>
+                        <button className='text-white bg-blue-500 rounded py-1 px-2'>Login</button>
                     </div>
                 </div>
             </div>
-              {isModelVisible && <Model />}  {/*Step 3 and Step 4 */}
+           
         </div>
     );
 }

@@ -23,7 +23,7 @@ function footer() {
                 Experiences the best possible time ever.
             </p>
             <div className='flex gap-6 pb-4'>
-              <a href='https://twitter.com/Mickerl_Codes' className=' text-2xl  '><FaXTwitter /></a>
+              <a href='https://twitter.com/Mickerl_dev' className=' text-2xl  '><FaXTwitter /></a>
               <a href='https://www.instagram.com/mickerl_codes/' className='text-2xl'><FaInstagram/></a>
               <a href='mailto:nanayawwiafe007@gmail.com' className='text-2xl'><MdOutlineMailOutline/></a>
               <a href='https://www.linkedin.com/in/mickerl-codes/' className='text-2xl hover:text-blue-600 '><FaLinkedinIn /></a>
@@ -57,7 +57,7 @@ function footer() {
           <span className='text-brand righteous text-red-600 '> TAPLIX</span>
         </p>
         <p>Designed By:
-          <a href='https://twitter.com/Mickerl_Codes'>Mickerl_Codes</a>
+          <a href='https://twitter.com/Mickerl_dev'>Mickerl_Codes</a>
         </p>
       </div>
       </div>

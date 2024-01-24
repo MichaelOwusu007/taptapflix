@@ -24,8 +24,10 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     };
 
     useEffect(() => {
+        if (movies.length === 0 ) {
         fetchMoviesData();
-    }, [fetchUrl]);
+        }
+    }, [fetchUrl, movies]);
 
     const opts = {
         height: "500",
